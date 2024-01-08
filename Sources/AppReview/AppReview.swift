@@ -71,8 +71,8 @@ public class AppReview {
     }
     
     @discardableResult
-    public func request(after: TimeInterval = 0.5) -> Void {
-        show(after: TimeInterval)
+    public func request(after time: TimeInterval = 0.5) -> Void {
+        show(after: time)
     }
     
     private func show(after: TimeInterval = 1.0) {
