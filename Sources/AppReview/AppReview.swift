@@ -75,7 +75,7 @@ public class AppReview {
         show(after: 0.5)
     }
     
-    private func show(after: TimeInterval) {
+    private func show(after: TimeInterval = 1.0) {
         DispatchQueue.main.asyncAfter(deadline: .now() + after) {
             #if os(iOS)
             if #available(iOS 14.0, *) {
