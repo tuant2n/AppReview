@@ -72,11 +72,11 @@ public class AppReview {
     
     @discardableResult
     public func request() -> Void {
-        show()
+        show(after: 0.5)
     }
     
-    private func show() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+    private func show(after: TimeInterval) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + after) {
             #if os(iOS)
             if #available(iOS 14.0, *) {
                 if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
