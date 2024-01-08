@@ -66,16 +66,16 @@ public class AppReview {
         guard isNeeded else { return false }
         lastReviewDate = Date()
         lastReviewVersion = version
-        request()
+        show()
         return true
     }
     
     @discardableResult
     public func request() -> Void {
-        request()
+        show()
     }
     
-    private func request() {
+    private func show() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             #if os(iOS)
             if #available(iOS 14.0, *) {
