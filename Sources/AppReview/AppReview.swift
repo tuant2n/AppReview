@@ -70,6 +70,11 @@ public class AppReview {
         return true
     }
     
+    @discardableResult
+    public func request() -> Void {
+        request()
+    }
+    
     private func request() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             #if os(iOS)
